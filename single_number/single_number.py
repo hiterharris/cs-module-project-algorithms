@@ -3,25 +3,17 @@ Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
 
-'''
-Questions:
-    -How do we add integers to the list twice
-    -How do you repeat process for all but one?
-
-Process:
-    -Create empty list
-    -Loop through range and add each number to list
-    -Repeat for all but one
-'''
-
-
 def single_number(arr):
-    list = []
-    for i in range(5):
-        list.append(i)
+    buckets = {}
+    for x in arr: 
+        if buckets.get(x) is None:
+            buckets[x] = 1
+        else:
+            buckets[x]+= 1
 
-    list = list * 2
-    return list[:-1]
+    for i in buckets:
+        if buckets[i] == 1:
+            return i
 
 
 if __name__ == '__main__':

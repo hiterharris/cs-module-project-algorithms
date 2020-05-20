@@ -3,19 +3,10 @@ Input: a List of integers
 Returns: a List of integers
 '''
 
-'''
-Questions:
-    -How do you remove items from list?
-    -How do you isolate non itegers?
-
-Process:
-    -Loop through list
-    -remove 0s
-'''
-
 def moving_zeroes(arr):
-    arr = [x for x in arr if int(x)]
-
+    for i in arr:
+        if i == 0:
+            arr.append(arr.pop(arr.index(0)))
     return arr
 
 
