@@ -16,16 +16,16 @@ Process:
 
 
 def single_number(arr):
-    list = [] 
+    list = []
     for i in range(5):
         list.append(i)
 
     list = list * 2
     return list[:-1]
 
-print(single_number(list))
-# if __name__ == '__main__':
-#     # Use the main function to test your implementation
-#     arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
 
-#     print(f"The odd-number-out is {single_number(arr)}")
+if __name__ == '__main__':
+    # Use the main function to test your implementation
+    arr = [1, 1, 4, 4, 5, 5, 3, 3, 9, 0, 0]
+
+    print(f"The odd-number-out is {single_number(arr)}")
