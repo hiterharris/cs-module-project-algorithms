@@ -2,10 +2,21 @@
 Input: a List of integers
 Returns: a List of integers
 '''
-def moving_zeroes(arr):
-    # Your code here
 
-    pass
+'''
+Questions:
+    -How do you remove items from list?
+    -How do you isolate non itegers?
+
+Process:
+    -Loop through list
+    -remove 0s
+'''
+
+def moving_zeroes(arr):
+    arr = [x for x in arr if int(x)]
+
+    return arr
 
 
 if __name__ == '__main__':
